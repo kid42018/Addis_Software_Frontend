@@ -19,7 +19,7 @@ import { StyledHome } from '../Home/Home.styled';
         <StyledHome> 
             {
                 stats?.data && <>
-                 <h1>No of Songs in Each Album</h1>
+                 <h1>Number of Songs in Each Album</h1>
                  {
                  stats?.data.noOfSongsInEachAlbum.map((s,i)=>
                     <Card key={i}  sx={{
@@ -56,7 +56,7 @@ import { StyledHome } from '../Home/Home.styled';
            
                       </Card>
                     )}
-                    <h1>No of Songs in Each Artist</h1>
+                    <h1>Number of Songs in Each Artist</h1>
                     {
                  stats?.data.noOfSongsInEachArtist.map((s,i)=>
                     <Card key={i}  sx={{
@@ -95,7 +95,7 @@ import { StyledHome } from '../Home/Home.styled';
             </Text>
                       </Card>
                     )}
-                    <h1>No of Songs in Each Gener</h1>
+                    <h1>Number of Songs in Each Gener</h1>
                     {
                  stats?.data.noOfSongsInEachGener.map((s,i)=>
                     <Card key={i}  sx={{
@@ -118,23 +118,23 @@ import { StyledHome } from '../Home/Home.styled';
               fontWeight='bold'
               color='primary'>
                  Number of songs:<Box
-  sx={{
-    display: 'inline-block',
-    color: 'white',
-    minWidth:"50px",
-    bg: '#d9b99b',
-    margin:"10px",
-    textAlign:"center",
-    px: 2,
-    py: 1,
-    borderRadius: 9999,
-  }}>
-{s.totalSongs}
-</Box>
+          sx={{
+            display: 'inline-block',
+            color: 'white',
+            minWidth:"50px",
+            bg: '#d9b99b',
+            margin:"10px",
+            textAlign:"center",
+            px: 2,
+            py: 1,
+            borderRadius: 9999,
+          }}>
+        {s.totalSongs}
+        </Box>
             </Text>
                       </Card>
                     )}
-                    <h1>No of Songs and Albums in An Artist</h1>
+                    <h1>Number of Songs and Albums in An Artist</h1>
                     {
                  stats?.data.noOfAlbumAndSongInEachArtist.map((s,i)=>
                     <Card key={i}  sx={{
@@ -153,8 +153,7 @@ import { StyledHome } from '../Home/Home.styled';
             </Text>
 
             <Text
-              fontWeight='bold'
-              color='primary'>
+             >
            Number of albums:<Box
   sx={{
     display: 'inline-block',
@@ -170,9 +169,7 @@ import { StyledHome } from '../Home/Home.styled';
 {s.totalAlbums}
 </Box>
             </Text>
-            <Text  style={{fontSize:"20px"}}
-              fontWeight='bold'
-              color='primary'>
+            <Text >
            Number of songs:<Box
   sx={{
     display: 'inline-block',

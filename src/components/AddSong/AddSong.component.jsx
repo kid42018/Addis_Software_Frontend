@@ -60,7 +60,7 @@ import { getGenersFetch, getSongsFetch, selectGeners, selectMessage, selectSongs
  </Box>
  <Box>
     <select onChange={(e)=>setSong({...song,gener:e.target.selectedOptions[0].value})}>
-    <option disabled  hidden>Select geners</option>
+    <option disabled selected >Select gener</option>
     {geners.data && geners.data.map((g,i)=><option value={g} key={i}>{g}</option>)}
  </select>
  </Box>

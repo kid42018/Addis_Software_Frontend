@@ -44,8 +44,8 @@ function* workGetGenersFetch(){
     function* workDeleteSong({payload}){
         try{
       const stats = yield call(Requests.deleteSong,payload.id);
-      yield put(getSongsFetch());
       yield put(setDeleteSuccess({...stats.data,_id:payload.id}));
+      yield put(getSongsFetch());
     }catch(e){
         yield put(getSongsError(e.response.data));
     }

@@ -8,6 +8,7 @@ import styled from '@emotion/styled'
     padding:15px;
     flex-wrap:wrap;
     gap:5%;
+    /* width:500px; */
     h1{
      width:90% !important;
      text-align: center;

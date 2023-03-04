@@ -11,10 +11,10 @@ import { createSlice } from '@reduxjs/toolkit';
           },
           reducers: {
               setError:(state,action)=>{
-                state.error = "";
+                state.error = action.payload;
               },
               setMessage:(state,action)=>{
-                state.message = "";
+                state.message = action.payload;
               },
               setDeleteStart:(state,action)=>{
                 state.isLoading = true;
@@ -24,7 +24,7 @@ import { createSlice } from '@reduxjs/toolkit';
                 state.isLoading = false;
               }, 
                setAddStart:(state,action)=>{
-                state.isLoading = false;
+                state.isLoading = true;
                },
                setAddSuccess:(state,action)=>{
                 state.message =  action.payload.message;
