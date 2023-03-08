@@ -19,6 +19,89 @@ import { StyledHome } from '../Home/Home.styled';
         <StyledHome> 
             {
                 stats?.data && <>
+                   {
+                    stats.data.totals[0] &&  <Card   sx={{
+                      p: 1,
+                      width:"100%",
+                      justifyContent:"center",
+                      display: "flex",
+                      borderRadius: 5,
+                      flexDirection:"column",
+                      boxShadow: '0 0 16px rgba(0, 0, 0, .25)',
+                    }} width={256}>
+<Text
+style={{fontSize:"20px"}}
+            color='primary'>
+           Totals
+          </Text>
+
+          <Text
+            color='primary'>
+           Number of songs:<Box
+sx={{
+  display: 'inline-block',
+  color: 'white',
+  minWidth:"50px",
+  bg: '#d9b99b',
+  margin:"10px",
+  textAlign:"center",
+  px: 2,
+  py: 1,
+  borderRadius: 9999,
+}}>
+{stats.data.totals[0].title}
+</Box></Text>
+<Text
+            color='primary'>
+           Number of albums:<Box
+sx={{
+  display: 'inline-block',
+  color: 'white',
+  minWidth:"50px",
+  bg: '#d9b99b',
+  margin:"10px",
+  textAlign:"center",
+  px: 2,
+  py: 1,
+  borderRadius: 9999,
+}}>
+{stats.data.totals[0].album}
+</Box></Text>
+<Text
+            color='primary'>
+           Number of artists:<Box
+sx={{
+  display: 'inline-block',
+  color: 'white',
+  minWidth:"50px",
+  bg: '#d9b99b',
+  margin:"10px",
+  textAlign:"center",
+  px: 2,
+  py: 1,
+  borderRadius: 9999,
+}}>
+{stats.data.totals[0].artist}
+</Box></Text>
+<Text
+            color='primary'>
+           Number of gener:<Box
+sx={{
+  display: 'inline-block',
+  color: 'white',
+  minWidth:"50px",
+  bg: '#d9b99b',
+  margin:"10px",
+  textAlign:"center",
+  px: 2,
+  py: 1,
+  borderRadius: 9999,
+}}>
+{stats.data.totals[0].gener}
+</Box></Text>
+         
+                    </Card>
+                   }
                  <h1>Number of Songs in Each Album</h1>
                  {
                  stats?.data.noOfSongsInEachAlbum.map((s,i)=>

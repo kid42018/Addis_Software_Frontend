@@ -1,4 +1,4 @@
-import {call,all, fork,put,takeEvery} from "redux-saga/effects";
+import {call,all, fork,put,takeEvery, takeLatest} from "redux-saga/effects";
 import {Requests} from "../services/requests.js";
 import { getGenersSuccess, getSongsError, getSongsFetch, getSongsSuccess, getStatsSuccess, setAddSuccess, setDeleteSuccess, setUpdateSuccess } from "./reducers/songs.reducer";
 function* workGetSongFetch(){
@@ -51,13 +51,13 @@ function* workGetGenersFetch(){
     }
     }
   function* onFetchSongSaga(){
-    yield takeEvery("songs/getSongsFetch",workGetSongFetch)
+    yield takeLatest("songs/getSongsFetch",workGetSongFetch)
   }
   function* onFetchGenersSaga(){
-    yield takeEvery("songs/getGenersFetch",workGetGenersFetch)
+    yield takeLatest("songs/getGenersFetch",workGetGenersFetch)
   }
   function* onFetchStatsSaga(){
-    yield takeEvery("songs/getStatsFetch",workGetStatsFetch)
+    yield takeLatest("songs/getStatsFetch",workGetStatsFetch)
   }
   function* onDeleteStartSaga(){
     yield takeEvery("songs/setDeleteStart",workDeleteSong)
